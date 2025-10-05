@@ -9,7 +9,7 @@ from utils.visualize import visualize_prediction
 n_classes = 32
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-dataset = CamVidDataset("data/raw/CamVid/train", "data/raw/CamVid/train_labels")
+dataset = CamVidDataset("data/raw/CamVid/test", "data/raw/CamVid/test_labels")
 loader = DataLoader(dataset, batch_size=4, shuffle=False)
 
 encoder = Encoder()
