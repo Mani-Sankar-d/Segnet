@@ -22,9 +22,6 @@ model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
 
-images, labels = next(iter(loader))
-images = images.to(device)
-
 with torch.no_grad():
     for images,labels in loader:
         images = images.to(device)
